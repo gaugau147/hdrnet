@@ -11,8 +11,6 @@ Fredo Durand
 
 Maintained by Michael Gharbi (<gharbi@mit.edu>)
 
-Tested on Python 2.7, Ubuntu 14.0, gcc-4.8.
-
 ## Disclaimer
 
 This is not an official Google product.
@@ -27,12 +25,21 @@ To install the Python dependencies, run:
     pip install -r requirements.txt
 
 ### Build
+Tested with Python 2.7, Tensorflow 1.1, Ubuntu 16.04, gcc-7.5
 
 Our network requires a custom Tensorflow operator to "slice" in the bilateral grid.
 To build it, run:
 
     cd hdrnet
     make
+
+To build cuda version (required CUDA 8.0 & cuDNN v7.1.4), run:
+```bash
+cd hdrnet
+mv Makefile Makefile.cpu
+mv Makefile.gpu Makefile
+make
+```
 
 To build the benchmarking code, run:
 
