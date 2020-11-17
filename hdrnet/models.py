@@ -18,7 +18,7 @@ import tensorflow as tf
 import numpy as np
 import os
 
-from hdrnet.layers import (conv, fc, bilateral_slice_apply)
+from layers import (conv, fc, bilateral_slice_apply)
 
 __all__ = [
   'HDRNetCurves',

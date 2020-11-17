@@ -17,7 +17,7 @@
 import tensorflow as tf
 import numpy as np
 
-from hdrnet import hdrnet_ops
+import hdrnet_ops
 
 w_initializer = tf.contrib.layers.variance_scaling_initializer
 b_initializer = tf.constant_initializer
